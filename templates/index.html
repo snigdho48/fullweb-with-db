@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tables - SB Admin</title>
+        {% include "css.html" %}
+    </head>
+    {% if user.is_authenticated %}
+    <body class="sb-nav-fixed">
+
+
+
+      {% include "base.html" %}
+
+
+
+
+      {% block content %}
+
+      {% endblock %}
+      {% include "footer.html" %}
+
+    {% include "js.html" %}
+    {% block all %}
+
+    {% endblock %}
+    {% else %}
+
+
+</body>
+{% endif %}
+    <body class="bg-danger h-100">
+      <div class=" col h-25 align-items-end d-flex justify-content-center text-white">
+
+        <h1>Please Log In First</h1>
+
+      </div>
+      <div class="col align-items-center d-flex justify-content-center mt-4">
+        <lebel class="w-25 btn btn-lg btn-primary btn-block"><a href="{% url 'login' %}" class="text-center text-white">Login in</a></lebel><br>
+
+
+      </div>
+    </body>
+</html>
