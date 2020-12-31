@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^Help/$',views.Help,name="Help"),
     url(r'^Shop/$',views.Shop,name="Shop"),
     url(r'^Track/$',views.Track,name="Track"),
-    url(r'^essential/$',views.essential,name="essential"),
+    url(r'^/$',views.essential,name="essential"),
     url(r'^cont1/$',views.cont1,name="cont1"),
 
 
